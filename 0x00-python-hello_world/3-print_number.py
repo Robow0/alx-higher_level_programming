@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 number = 98
-print("{:d} 98 Battery street".format(number))
+print("{:d} Battery street, {:d} Battery street and {:d} Battery street".format(number))
