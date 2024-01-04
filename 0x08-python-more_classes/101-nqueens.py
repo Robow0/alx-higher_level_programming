@@ -109,23 +109,23 @@ def coordinate_format(candidates):
         solutions for amount of columns last checked
 
     Attributes:
-        nqueen (list) of (list) of (int): each member list contains the row
+        holberton (list) of (list) of (int): each member list contains the row
     column number for each queen found
 
     Returns:
-        nqueenn, the list of coordinates
+        holberton, the list of coordinates
 
     """
-    nqueen = []
+    holberton = []
     for x, attempt in enumerate(candidates):
-        nqueen.append([])
+        holberton.append([])
         for i, row in enumerate(attempt):
-            nqueen[x].append([])
+            holberton[x].append([])
             for j, col in enumerate(row):
                 if col:
-                    nqueen[x][i].append(i)
-                    nqueen[x][i].append(j)
-    return nqueen
+                    holberton[x][i].append(i)
+                    holberton[x][i].append(j)
+    return holberton
 
 # init candidates list with first column of 0s
 candidates = []
