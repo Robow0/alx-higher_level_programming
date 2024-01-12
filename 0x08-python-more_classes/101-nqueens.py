@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """The n queens puzzle."""
 class NQueens:
     """Generate all valid solutions for the n queens puzzle"""
