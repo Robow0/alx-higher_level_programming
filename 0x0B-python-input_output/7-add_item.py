@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""
-script to save and load
-"""
-import sys
+from sys import argv
+"""access commandline arguments"""
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+"""create object from JSON file"""
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+"""writes an object to text file, using JSON representation"""
 
-save_json = __import__('5-save_to_json_file.py').save_to_json_file
-load_json = __import__('6-load_from_json_file.py').load_from_json_file
-
-file = "add_item.json"
+filename = "add_item.json"
 try:
-    new = load_json(file)
-except (ValueError, FileNotFoundError):
-    new = []
-for args in sys.argv[1:]:
-    new.append(args)
-save_json(new, file)
+    content = load_from_json_file(filename)
+except:
+    content = []
+
+for i in range(1, len(argv)):
+    content.append(argv[i])
+save_to_json_file(content, filename)
