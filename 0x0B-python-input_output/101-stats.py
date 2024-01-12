@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-import sys
-import io
+"""Reads from standard input and computes metrics.
+After every ten lines or the input of a keyboard interruption (CTRL + C),
+prints the following statistics:
+    - Total file size up to that point.
+    - Count of read status codes up to that point.
+"""
 
-#input = io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8')
-#with open(input, "r", encoding="utf-8") as file:
- #   for line in file:
-  #      print(line)
-
-#input = io.TextIOWrapper(sys.stdin , encoding='utf-8')
 
 def print_stats(size, status_codes):
     """Print accumulated metrics.
