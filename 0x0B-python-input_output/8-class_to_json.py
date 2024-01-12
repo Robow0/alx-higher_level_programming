@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
 
-import json
-
-
-def load_from_json_file(filename):
-    with open(filename, "r", encoding="UTF-8") as f:
-        return json.load(f)
+def class_to_json(obj):
+    """ function that returns the dictionary
+    description
+    """
+    dic = {}
+    if hasattr(obj, "__dict__"):
+        dic = obj.__dict__.copy()
+    return dic
